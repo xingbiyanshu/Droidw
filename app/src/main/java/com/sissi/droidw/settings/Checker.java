@@ -17,9 +17,15 @@ public class Checker {
         return NotificationManagerCompat.from(context).areNotificationsEnabled(); // 注意: API level 19以下始终返回true
     }
 
-    /** 应用自启动(开机后自启动,被杀后自启动)权限是否已开启 
+    /** 应用自启动权限是否已开启
      * */
     public static boolean isAppAutoLaunchEnabled(Context context){
+        return false;
+    }
+
+    /** 应用悬浮窗权限是否已开启
+     * */
+    public static boolean isAppFloatingWindowEnabled(Context context){
         return false;
     }
 }
