@@ -38,7 +38,7 @@ publish {
     repoName = 'maven'
     groupId = 'com.sissi.droidw'
     artifactId = 'droidw'
-    publishVersion = '1.0.1'
+    publishVersion = '1.0.3'
     desc = 'maven test'
     website = 'https://github.com/xingbiyanshu/Droidw'
 }
