@@ -67,7 +67,7 @@ public class KLog {
         level = lv;
     }
 
-    /**print at intervals*/
+    // print at intervals
     public static void ip(String tag, int lev, int interval, String format, Object... para){
         if (!isEnabled || lev < level || null == tag || interval<=0 || null == format || null == para) {
             return;

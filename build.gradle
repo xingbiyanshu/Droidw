@@ -9,7 +9,10 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.0.1'
 
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
+        // 适用于android的maven插件
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0' // 在android-maven-gradle-plugin github页面可查看所有release版本以及各release版适用的gradle版本
+        // 发布到jcenter需要的插件
+        classpath 'com.novoda:bintray-release:0.8.1' // 在bintray-release github页面可查看所有release版本以及各release版适用的gradle版本
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -19,6 +22,15 @@ allprojects {
     repositories {
         google()
         jcenter()
+    }
+
+    // 解决因乱码导致构建失败的问题
+    tasks.withType(Javadoc) {
+        options{
+            encoding "UTF-8"
+            charSet 'UTF-8'
+            links "http://docs.oracle.com/javase/8/docs/api"
+        }
     }
 }
 
